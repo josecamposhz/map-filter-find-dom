@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElement</title>
+</head>
+<body>
+    <ol id="lista"></ol>
+    <script>
+        // Obtenemos el elemento <ol> en donde agregaremos los <li>
+        const lista = document.getElementById("lista");
+        
+        // Creamos el <li>
+        const li = document.createElement("h1");
+
+        // Agregamos texto al <li>
+        li.textContent = "Nombre";
+
+        // Agregamos el <li> a la lista
+        lista.appendChild(li);
+    </script>
+</body>
+</html>

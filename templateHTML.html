@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>templateHTML</title>
+</head>
+
+<body>
+    <ul>
+        <li class="item-lista">
+            <b>Nombre: </b> <span class="text-danger">Producto 0</span>
+        </li>
+    </ul>
+    <hr>
+    <ul id="lista"></ul>
+    <script>
+        const lista = document.getElementById("lista");
+        const arrayItem = ["Producto 1", "Producto 2", "Producto 3"];
+
+        /* arrayItem.forEach((item) => {
+            // creamos el <li>
+            const li = document.createElement("li");
+            // agregamos clase al <li>
+            li.classList.add("item-lista");
+            // creamos <b>
+            const b = document.createElement("b");
+            // agregamos un texto a <b>
+            b.textContent = "Nombre: ";
+            // creamos un span
+            const span = document.createElement("span");
+            // agregamos la clase "text-danger" al <span>
+            span.classList.add("text-danger");
+            // agremos el texto del elemento a <span>
+            span.textContent = item;
+            // agregamos nodos hijos a li
+            li.appendChild(b);
+            li.appendChild(span);
+            // agregamos el li a la lista
+            lista.appendChild(li);
+        }); */
+
+        // innerHTML - Template String - forEach
+        /* let innerHTML = "";
+        arrayItem.forEach((item) => {
+            innerHTML += `
+            <li class="list">
+                <b>Nombre: </b> <span class="text-danger">${item}</span>
+            </li>
+            `;
+        });
+        lista.innerHTML = innerHTML; */
+
+        // innerHTML - Template String - map
+        /* const innerHTML = arrayItem.map((item) => `
+            <li class="list">
+                <b>Nombre: </b> <span class="text-danger">${item}</span>
+            </li>
+        `).join('');
+        console.log(innerHTML) */
+        lista.innerHTML = arrayItem.map((item) => `
+            <li class="list">
+                <b>Nombre: </b> <span class="text-danger">${item}</span>
+            </li>
+        `).join('');
+    </script>
+</body>
+
+</html>

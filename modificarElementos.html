@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modificarElementos</title>
+</head>
+
+<body>
+    <p id="parrafo1" class="parrafo">Hola este es mi párrafo 1</p>
+    <p id="parrafo2" class="parrafo">Hola este es mi párrafo 2</p>
+
+    <script>
+        const parrafo = document.querySelector("p");
+        // parrafo.textContent = "Párrafo dinámico";
+        parrafo.innerHTML = "<b>Texto destacado</b> <h1>utilizando innerHTML<h1>";
+        // Retornas las clases del elemento
+        console.log(parrafo.className);
+        // Agregamos una nueva clase al elemento
+        parrafo.classList.add("nueva-clase");
+        console.log(parrafo.className);
+        // console.log(parrafo);
+    </script>
+</body>
+
+</html>

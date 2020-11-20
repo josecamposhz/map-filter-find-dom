@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buscarElementos</title>
+</head>
+
+<body>
+    <p id="parrafo1" class="parrafo">Hola este es mi párrafo 1</p>
+    <p id="parrafo2" class="parrafo">Hola este es mi párrafo 2</p>
+
+    <script>
+        // console.log(document);
+        // console.log(document.head);
+        // console.log(document.body);
+        console.log(document.querySelector("#parrafo2"));
+        console.log(document.getElementById("parrafo1"));
+        console.log(document.querySelector(".parrafo"));
+        console.log(document.querySelector("p"));
+        console.log(document.querySelectorAll(".parrafo"));
+    </script>
+</body>
+
+</html>
+
+document.querySelector(".parrafo").textContent = "Párrafo dinámico";
