@@ -22,4 +22,4 @@ const numerosCuadradosforEach = [];
 numeros.forEach(numero => {
     numerosCuadradosforEach.push(cuadrado(numero));
 });
-console.log("numerosCuadrados con forEach", numerosCuadradosforEach)
+console.log("numerosCuadrados con forEach", numerosCuadradosforEach);
